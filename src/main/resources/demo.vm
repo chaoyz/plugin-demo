@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title>Plugin demo</title>
+##    This tells the application that it needs to use the admin decorator around the body of this page
+    <meta name="decorator" content="atl.admin"/>
+    $webResourceManager.requireResourceForContext("plugin-demo")
+</head>
+<body>
+Hello World
+<div>
+    <p>Get请求结果展示：</p>
+    <span id="get-result"></span>
+    <button id="get-result-btn" type="submit">测试</button>
+</div>
+</body>
+</html>

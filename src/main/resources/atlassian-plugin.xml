@@ -1,0 +1,47 @@
+<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}" />
+        <param name="plugin-icon">images/pluginIcon.png</param>
+        <param name="plugin-logo">images/pluginLogo.png</param>
+    </plugin-info>
+
+    <!-- add our i18n resource -->
+    <resource type="i18n" name="i18n" location="plugin-demo"/>
+    
+    <!-- add our web resources -->
+    <web-resource key="plugin-demo-resources" name="plugin-demo Web Resources">
+        <dependency>com.atlassian.auiplugin:ajs</dependency>
+        
+        <resource type="download" name="plugin-demo.css" location="/css/plugin-demo.css"/>
+        <resource type="download" name="plugin-demo.js" location="/js/plugin-demo.js"/>
+        <resource type="download" name="images/" location="/images"/>
+        <resource type="velocity" name="template" location="/demo.vm"/>
+        <context>plugin-demo</context>
+    </web-resource>
+
+    <listener name="demo-listener" key="demo-listener" class="cn.idocode.confluence.listener.EventListenerDemo">
+        <description>
+            a demo listener
+        </description>
+    </listener>
+
+    <rest name="demo-rest" key="demo-rest" path="/plugin-demo" version="1.0">
+        <description>
+            a demo rest api
+        </description>
+    </rest>
+
+    <web-item name="plugin-admin-web" key="plugin-admin-web" section="system.admin/configuration" weight="10" application="confluence">
+        <description>a plugin admin configuration web demo</description>
+        <label key="plugin.demo.configuration.web" />
+        <link linkId="plugin-demo-configuration-web-link">/plugins/servlet/plugin-demo/admin</link>
+    </web-item>
+
+    <servlet key="plugin-demo-servlet" class="cn.idocode.confluence.controller.StaticResourceServlet">
+        <url-pattern>/plugin-demo/admin</url-pattern>
+        <description>plugin demo static resource servlet</description>
+    </servlet>
+    
+</atlassian-plugin>
