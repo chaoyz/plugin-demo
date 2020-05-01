@@ -9,11 +9,11 @@
 
     <!-- add our i18n resource -->
     <resource type="i18n" name="i18n" location="plugin-demo"/>
-    
+
     <!-- add our web resources -->
     <web-resource key="plugin-demo-resources" name="plugin-demo Web Resources">
         <dependency>com.atlassian.auiplugin:ajs</dependency>
-        
+
         <resource type="download" name="plugin-demo.css" location="/css/plugin-demo.css"/>
         <resource type="download" name="plugin-demo.js" location="/js/plugin-demo.js"/>
         <resource type="download" name="images/" location="/images"/>
@@ -43,5 +43,11 @@
         <url-pattern>/plugin-demo/admin</url-pattern>
         <description>plugin demo static resource servlet</description>
     </servlet>
-    
+
+    <web-item key="baidu-link" name="baidu-link" section="system.header/left" weight="60">
+        <description>a system header link demo</description>
+        <label key="system.header.left.baidu" />
+        <link linkId="system-header-baidu-link" >http://www.baidu.com</link>
+    </web-item>
+
 </atlassian-plugin>

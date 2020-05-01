@@ -3,7 +3,7 @@
     <title>Plugin demo</title>
 ##    This tells the application that it needs to use the admin decorator around the body of this page
     <meta name="decorator" content="atl.admin"/>
-    $webResourceManager.requireResourceForContext("plugin-demo")
+    $webResourceManager.requireResourcesForContext("plugin-demo")
 </head>
 <body>
 Hello World

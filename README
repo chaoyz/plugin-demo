@@ -1,11 +1,17 @@
-You have successfully created an Atlassian Plugin!
+```
+ _____ _____ _   _ ______ _     _   _ _____ _   _ _____  _____      ______ _     _   _ _____ _____ _   _
+/  __ \  _  | \ | ||  ___| |   | | | |  ___| \ | /  __ \|  ___|     | ___ \ |   | | | |  __ \_   _| \ | |
+| /  \/ | | |  \| || |_  | |   | | | | |__ |  \| | /  \/| |__ ______| |_/ / |   | | | | |  \/ | | |  \| |
+| |   | | | | . ` ||  _| | |   | | | |  __|| . ` | |    |  __|______|  __/| |   | | | | | __  | | | . ` |
+| \__/\ \_/ / |\  || |   | |___| |_| | |___| |\  | \__/\| |___      | |   | |___| |_| | |_\ \_| |_| |\  |
+ \____/\___/\_| \_/\_|   \_____/\___/\____/\_| \_/\____/\____/      \_|   \_____/\___/ \____/\___/\_| \_/
 
-Here are the SDK commands you'll use immediately:
 
-* atlas-run   -- installs this plugin into the product and starts it on localhost
-* atlas-debug -- same as atlas-run, but allows a debugger to attach at port 5005
-* atlas-help  -- prints description for all commands in the SDK
+```
 
-Full documentation is always available at:
+this is a confluence plugin demo
 
-https://developer.atlassian.com/display/DOCS/Introduction+to+the+Atlassian+Plugin+SDK
+- How to add a servlet or rest api
+- Create a plugin admin UI
+- Add a confluence event listener
+- Add a application top menu link
